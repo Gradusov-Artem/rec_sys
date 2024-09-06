@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'products_recommendations.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'recommendations_system',  # Имя вашей базы данных
-        'USER': 'postgres',      # Имя пользователя PostgreSQL
-        'PASSWORD': '7719150Artik',  # Пароль пользователя
+        'NAME': 'recommendations_system',
+        'USER': 'postgres',
+        'PASSWORD': '7719150Artik',
         'HOST': 'localhost',
         'PORT': '5432',
     }
