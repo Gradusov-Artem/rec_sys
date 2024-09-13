@@ -1,15 +1,14 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from rest_framework.decorators import api_view  # type: ignore
 from .models import Company
-from django.http import JsonResponse
+from django.http import JsonResponse  # type: ignore
 import json
 
 @api_view(['POST'])
 def create_company(request):
     try:
-        data = json.loads(request.body)
-        id = data['id']
-        name = data['name']
+        data: dict = json.loads(request.body)
+        id: int = int(data['id'])
+        name: str = data['name']
 
         # Проверка на наличие компании с таким УНП
         if Company.objects.filter(id=id).exists():
